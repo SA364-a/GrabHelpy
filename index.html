@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GrabHelpy</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>GrabHelpy</h1>
+
+<!-- ANALYZERS -->
+<div class="analyzers">
+
+<div class="box">
+<h3>Goal Analyzer</h3>
+<input type="text" id="goalInput" placeholder="Enter your goal">
+<button onclick="analyzeGoal()">Analyze Goal</button>
+</div>
+
+<div class="box">
+<h3>Budget Analyzer</h3>
+<input type="number" id="budgetInput" placeholder="Enter Budget">
+<button onclick="analyzeBudget()">Analyze Budget</button>
+</div>
+
+<div class="box">
+<h3>Regret Analyzer</h3>
+<textarea id="regretInput" rows="4" placeholder="Enter keywords"></textarea>
+<button onclick="analyzeRegret()">Analyze Regret</button>
+</div>
+
+</div>
+
+<hr>
+
+<!-- SEARCH -->
+<div class="search-box">
+<input type="text" id="productSearch" placeholder="Search product (title, SEO, synonyms...)">
+<button onclick="searchProduct()">Search</button>
+</div>
+
+<hr>
+
+<!-- FILTERS -->
+<h2>Browse Products</h2>
+
+<div class="filters">
+
+<label>Category</label>
+<select id="categoryDropdown">
+<option value="">Select Category</option>
+</select>
+
+<!-- dynamic subcategory goes here -->
+<div id="subcategoryContainer"></div>
+
+</div>
+
+<hr>
+
+<div id="analysisResult"></div>
+
+<h2>Products</h2>
+<div id="productsGrid" class="products-grid"></div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
